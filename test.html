@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Фитнес тестирование</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <section class="anketa">
+            <div class="anketa__container container">
+                <form action="" class="form">
+                    <div class="form__date">
+                        <label for="" class="form__label">Дата фитнес-тесирования:</label>
+                        <input type="date" class="form__point">
+                    </div>
+                    <div class="form__fio">
+                        <label for="" class="form__label">ФИО:</label>
+                        <input type="text" class="form__point">
+                    </div>
+                    <div class="form__dob">
+                        <label for="" class="form__label">Дата рождения:</label>
+                        <input type="date" class="form__point">
+                    </div>
+
+                    <div class="form__target">
+                        <label for="" class="form__label">Цель занятий:</label>
+                        <div class="form__target-point"><input type="checkbox" name="" id="" class="form__label"><span>Общеукрепляющее воздействие</span></div>
+                        <div class="form__target-point"><input type="checkbox" name="" id="" class="form__label"><span>Снижение массы тела (за счет жировой массы)</span></div>
+                        <div class="form__target-point"><input type="checkbox" name="" id="" class="form__label"><span>Рост мышечной массы</span></div>
+                        <div class="form__target-point"><input type="checkbox" name="" id="" class="form__label"><span>Укрепление отдельных мышечных групп</span></div>
+                        <div class="form__target-point"><input type="checkbox" name="" id="" class="form__label"><span>Рост физической работоспособности</span></div>
+                        <div class="form__target-point"><input type="checkbox" name="" id="" class="form__label"><span>Гибкость</span></div>
+                    </div>
+
+                    <div class="form__antropometr">
+                        <div class="form__teg">
+                            <label for="" class="form__label">Рост:</label>
+                            <input type="number" class="form__point" id="height">
+                        </div>
+                        <div class="form__teg">
+                            <label for="" class="form__label">Вес:</label>
+                            <input type="number" class="form__point" id="weight" onchange="Imt()">
+                        </div>
+                        <div class="form__teg">
+                            <label for="" class="form__label">Индекс массы тела:</label>
+                            <input type="input" class="form__point" id="imt" onclick="Imt()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--подключаем jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!--Подключаем файл JS скриптов-->
+    <script src="js/script.js"></script>
+</body>
+</html>

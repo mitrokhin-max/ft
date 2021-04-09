@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Фитнес тестирование</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <h1 class="header__title">Протокол первичного тестирования</h1>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="form__container container">
+                <form action="" class="form">
+                    <section class="form__info info">
+                        <h2 class="info__title title">Информация о пациенте:</h2>
+                        <div class="info__item">
+                            <label for="" class="info__label">Дата фитнес-тестирования:</label>
+                            <input type="date" class="info__field">
+                        </div>
+                        <div class="info__item">
+                            <label for="" class="info__label">ФИО:</label>
+                            <input type="text" class="info__field">
+                        </div>
+                        <div class="info__item">
+                            <label for="" class="info__label">Дата рождения:</label>
+                            <input type="date" class="info__field">
+                        </div>
+                    </section>
+
+                    <section class="form__target target">
+                        <h2 class="target__title title">Цели занятий:</h2>
+                        <p class="target__item">
+                            <input type="checkbox" name="target" class="target__checkbox" id="target1"><label class="target__label" for="target1">Общеукрепляющее воздействие</label>
+                        </p>
+                        <p class="target__item">
+                            <input type="checkbox" name="target" class="target__checkbox" id="target2"><label class="target__label" for="target2">Снижение массы тела (за счет жировой массы)</label>
+                        </p>
+                        <p class="target__item">
+                            <input type="checkbox" name="target" class="target__checkbox" id="target3"><label class="target__label" for="target3">Рост мышечной массы</label>
+                        </p>
+                        <p class="target__item">
+                            <input type="checkbox" name="target" class="target__checkbox" id="target4"><label class="target__label" for="target4">Укрепление отдельных мышечных групп</label>
+                        </p>
+                        <p class="target__item">
+                            <input type="checkbox" name="target" class="target__checkbox" id="target5"><label class="target__label" for="target5">Рост физической работоспособности</label>
+                        </p>
+                        <p class="target__item">
+                            <input type="checkbox" name="target" class="target__checkbox" id="target6"><label class="target__label" for="target6">Гибкость</label>
+                        </p>
+                    </section>
+
+                    <section class="form__expirience expirience">
+                        <h2 class="expirience__title title">Предшествуюущий опыт тренировок:</h2>
+                        <p class="expirience__item">
+                            <input type="radio" name="exp" class="expirience__radio" id="exp1"><label class="expirience__label" for="exp1">Отсутствует</label>
+                        </p>
+                        <p class="expirience__item">
+                            <input type="radio" name="exp" class="expirience__radio" id="exp2"><label class="expirience__label" for="exp2">Эпизодические занятия</label>
+                        </p>
+                        <p class="expirience__item">
+                            <input type="radio" name="exp" class="expirience__radio" id="exp3"><label class="expirience__label" for="exp3">Регулярные тренировки 1-2 раза/нед</label>
+                        </p>
+                        <p class="expirience__item">
+                            <input type="radio" name="exp" class="expirience__radio" id="exp4"><label class="expirience__label" for="exp4">Регулярные тренировки >2 раз/нед</label>
+                        </p>
+                        <p class="expirience__item">
+                            <label for="" class="expirience__label">Вид активности:</label>
+                            <input type="text" class="expirience__type">
+                        </p>
+                    </section>
+
+                    <section class="form__antropometr antropometr">
+                        <h2 class="antropometr__title title">Антропометрические данные:</h2>
+                        <div class="antropometr__imt">
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">Рост (см):</label>
+                                <input type="number" class="antropometr__vaule" id="height" onchange="Imt()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">Вес (кг):</label>
+                                <input type="number" class="antropometr__vaule" id="weight" onchange="Imt()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">Индекс массы тела (кг/м<sup>2</sup>):</label>
+                                <input type="number" class="antropometr__vaule" id="imt" readonly>
+                            </p>
+                        </div>
+
+                        <div class="antropometr__excurtion">
+                            <h3 class="antropometr__subtitle">Обхват грудной клетки (см):</h3>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- пауза:</label>
+                                <input type="number" class="antropometr__vaule" id="pause">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- вдох:</label>
+                                <input type="number" class="antropometr__vaule" id="vdoh" onchange="Exc()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- выдох:</label>
+                                <input type="number" class="antropometr__vaule" id="vydoh" onchange="Exc()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">Экскурсия грудной клетки:</label>
+                                <input type="number" class="antropometr__vaule" id="excurtion" readonly>
+                            </p>
+                        </div>
+
+                        <div class="antropometr__body">
+                            <h3 class="antropometr__subtitle">Тип телосложения:</h3>
+                            <p class="antropometr__item">
+                                <input type="radio" name="body" class="antropometr__radio" id="body1"><label class="antropometr__label" for="body1">Астенический</label>
+                            </p>
+                            <p class="antropometr__item">
+                                <input type="radio" name="body" class="antropometr__radio" id="body2"><label class="antropometr__label" for="body2">Нормостенический</label>
+                            </p>
+                            <p class="antropometr__item">
+                                <input type="radio" name="body" class="antropometr__radio" id="body3"><label class="antropometr__label" for="body3">Гиперстенический</label>
+                            </p>
+                        </div>
+
+                        <div class="antropometr__fat">
+                            <h3 class="antropometr__subtitle">Кожно-жировая складка (мм):</h3>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- кжс1:</label>
+                                <input type="number" class="antropometr__vaule" id="kjs1" onchange="Sum()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- кжс2:</label>
+                                <input type="number" class="antropometr__vaule" id="kjs2" onchange="Sum()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- кжс3:</label>
+                                <input type="number" class="antropometr__vaule" id="kjs3" onchange="Sum()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">сумма:</label>
+                                <input type="number" class="antropometr__vaule" id="sum" readonly>
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">Процент жира:</label>
+                                <input type="number" class="antropometr__vaule">
+                            </p>
+                        </div>
+
+                        <div class="antropometr__power">
+                            <h3 class="antropometr__subtitle">Сила мышц (динамометрия):</h3>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- правая:</label>
+                                <input type="number" class="antropometr__vaule" id="right" onchange="Pow()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">- левая:</label>
+                                <input type="number" class="antropometr__vaule" id="left" onchange="Pow()">
+                            </p>
+                            <p class="antropometr__item">
+                                <label for="" class="antropometr__label">Силовой индекс (%):</label>
+                                <input type="number" class="antropometr__vaule" id="power" readonly>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="form__functional functional">
+                        <h2 class="functional__title title">Функциональный тест Руфье:</h2>
+                        <p class="functional__item">
+                            <label for="" class="functional__label">Пульс покоя:</label>
+                            <input type="number" id="p1" class="functional__value" onchange="Ird()">
+                        </p>
+                        <p class="functional__item">
+                            <label for="" class="functional__label">Пульс за первые 15с:</label>
+                            <input type="number" id="p2" class="functional__value" onchange="Ird()">
+                        </p>
+                        <p class="functional__item">
+                            <label for="" class="functional__label">Пульс за последние 15с:</label>
+                            <input type="number" id="p3" class="functional__value" onchange="Ird()">
+                        </p>
+                        <p class="functional__item">
+                            <label for="" class="functional__label">Индекс Руфье:</label>
+                            <input type="number" id="ird" class="functional__value" readonly>
+                        </p>
+                    </section>
+
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer"></footer>
+    </div>
+
+    <!--Подключаем файл JS скриптов-->
+    <script src="js/script.js"></script>
+</body>
+</html>
